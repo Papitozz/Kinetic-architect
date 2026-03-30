@@ -1,0 +1,31 @@
+$primary: #6366F1;
+$secondary: #A855F7;
+$tertiary: #B85393;
+$neutral: #0F172A;
+$active--link: #A3A6FF;
+$text--color: #DEE5FF;
+$actions: #6F00BE;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+input {
+    outline: none;
+}
+
+a {
+    color: $active--link;
+    text-decoration-line: none;
+}
+
+button {
+    display: inline-block;
+    border: none;
+}
