@@ -1,0 +1,19 @@
+@import "../components/base.scss";
+
+// header
+@import "../components/header.scss";
+
+// aside
+.aside {
+    grid-area: aside;
+}
+
+// main
+.main {
+    grid-area: main;
+}
+
+// footer
+.footer {
+    grid-area: footer;
+}

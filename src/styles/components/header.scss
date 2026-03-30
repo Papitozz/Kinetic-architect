@@ -1,0 +1,82 @@
+.header {
+    @extend %flex;
+    height: 68px;
+    background-color: #fff;
+    background-color: $bgc;
+    grid-area: header;
+
+    &-nav {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+
+    };
+
+    &-logo {
+        color: $text--color;
+        font: {
+            size: 20px;
+            weight: bold;
+        }
+
+    };
+
+    &-left {
+        @extend %flex;
+        gap: 24px;
+
+        & a {
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.4px;
+            color: $text--color;
+            opacity: 0.6;
+            transition: 0.3s;
+
+            &:hover {
+                color: $active--link;
+                opacity: 1;
+            }
+        }
+    };
+
+    &-right {
+        @extend %flex;
+        gap: 24px;
+    };
+
+    &-search {
+        @extend %flex;
+
+        & label {
+            @extend %flex;
+            background-color: black;
+            height: 36px;
+            cursor: pointer;
+        };
+
+        & img {
+            padding: 0 12px;
+        }
+    }
+}
+
+#search {
+    height: 36px;
+    width: 221px;
+    font-size: 14px;
+    color: $text--color;
+    background-color: black;
+}
+
+.theme, .bell, .profile-avatar {
+    cursor: pointer;
+}
+
+.theme, .bell {
+    height: 18px;
+}
+
+.profile-avatar {
+    height: 32px;
+}
