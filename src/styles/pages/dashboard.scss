@@ -3,6 +3,20 @@
 // header
 @import "../components/header.scss";
 
+@font-face {
+    font-family: "Inter";
+    src: url("../../assets/fonts/Inter-VariableFont_opsz\,wght.ttf") format('truetype');
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter-italic";
+    src: url("../../assets/fonts/Inter-Italic-VariableFont_opsz\,wght.ttf") format('truetype');
+    font-display: swap;
+    font-style: italic;
+}
+
 // aside
 .aside {
     grid-area: aside;
