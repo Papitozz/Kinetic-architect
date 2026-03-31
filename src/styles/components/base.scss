@@ -6,6 +6,8 @@ $active--link: #A3A6FF;
 $text--color: #DEE5FF;
 $actions: #6F00BE;
 $bgc: #060E20;
+$aside--bg: #091328;
+$active--bg: #0F1930;
 
 * {
     margin: 0;
@@ -49,7 +51,7 @@ ul, ol, li {
 
 .wrap {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
     grid-template-areas:
     'header header'
     'aside main'

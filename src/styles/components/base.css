@@ -34,6 +34,6 @@ ul, ol, li {
 
 .wrap {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto 1fr;
   grid-template-areas: "header header" "aside main" "footer footer";
 }/*# sourceMappingURL=base.css.map */

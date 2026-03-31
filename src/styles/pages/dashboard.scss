@@ -17,10 +17,8 @@
     font-style: italic;
 }
 
-// aside
-.aside {
-    grid-area: aside;
-}
+// Aside
+@import "../components/aside.scss";
 
 // main
 .main {
