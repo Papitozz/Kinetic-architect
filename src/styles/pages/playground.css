@@ -1,0 +1,231 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../../assets/fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-italic";
+  src: url("../../assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../../assets/fonts/Manrope-VariableFont_wght.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+a {
+  color: #a3a6ff;
+  text-decoration-line: none;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+.container {
+  padding: 0 48px;
+}
+
+.aside-header, .header-search label, .header-search, .header-right, .header-left, .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrap {
+  display: grid;
+  grid-template-columns: 255px 1fr;
+  grid-template-areas: "header header" "aside main" "footer footer";
+}
+
+.header {
+  height: 68px;
+  background-color: #fff;
+  background-color: #060E20;
+  grid-area: header;
+}
+.header-nav {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+.header-logo {
+  color: #DEE5FF;
+  font-size: 20px;
+  font-weight: bold;
+}
+.header-left {
+  gap: 24px;
+}
+.header-left a {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  color: #DEE5FF;
+  opacity: 0.6;
+  transition: 0.3s ease;
+}
+.header-left a:hover {
+  color: #a3a6ff;
+  opacity: 1;
+}
+.header-right {
+  gap: 24px;
+}
+.header-search label {
+  background-color: black;
+  height: 36px;
+  cursor: pointer;
+}
+.header-search img {
+  padding: 0 12px;
+}
+
+#search {
+  height: 36px;
+  width: 221px;
+  font-size: 14px;
+  color: #DEE5FF;
+  background-color: black;
+}
+
+.theme, .bell, .profile-avatar {
+  cursor: pointer;
+}
+
+.theme, .bell {
+  height: 18px;
+}
+
+.profile-avatar {
+  height: 32px;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+  grid-area: aside;
+  gap: 32px;
+  background-color: #091328;
+  position: relative;
+}
+.aside-header {
+  padding: 16px 24px;
+  justify-content: start;
+}
+.aside-header-project {
+  margin-left: 12px;
+  margin-top: 4.5px;
+}
+.aside-header-project h2 {
+  color: #DEE5FF;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1.2px;
+}
+.aside-header-project span {
+  color: #DEE5FF;
+  opacity: 0.4;
+  font-size: 15px;
+  line-height: 15px;
+}
+.aside-nav {
+  width: 100%;
+  overflow-x: hidden;
+}
+.aside-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 13px 16px;
+  opacity: 0.5;
+  color: #DEE5FF;
+  width: 100%;
+  transition: opacity 0.3s ease;
+}
+.aside-nav a:hover {
+  opacity: 1;
+}
+.aside-nav a[data-active=true] {
+  color: #a3a6ff;
+  background-color: #0F1930;
+  opacity: 1;
+  margin-left: 12px;
+}
+.aside-nav a[data-active=true] path {
+  fill: #A3A6FF;
+  fill-opacity: 1;
+}
+.aside-nav a path {
+  fill: #DEE5FF;
+  fill-opacity: 0.5;
+}
+.aside-footer {
+  bottom: 42.5px;
+  position: absolute;
+  width: 100%;
+}
+.aside-footer .add-widget {
+  display: block;
+  background: linear-gradient(to bottom right, #a3a6ff, #6063EE);
+  height: 40px;
+  max-width: 223px;
+  width: 100%;
+  border-radius: 6px;
+  color: #000;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  margin: 0 auto;
+  padding: 0 10px;
+  font-weight: bold;
+  font-size: 12px;
+}
+.aside-footer .line {
+  display: block;
+  background-color: #DEE5FF;
+  opacity: 0.5;
+  height: 1px;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 25.67px;
+}
+.aside-footer .help {
+  margin-bottom: 20px;
+}
+.aside-footer .help, .aside-footer .logout {
+  background: none;
+  display: flex;
+  align-items: center;
+  color: #DEE5FF;
+  gap: 12px;
+  margin-left: 32px;
+}/*# sourceMappingURL=playground.css.map */

@@ -6,6 +6,7 @@
     grid-area: aside;
     gap: 32px;
     background-color: $aside--bg;
+    position: relative;
 
     &-header {
         @extend %flex;
@@ -71,6 +72,52 @@
                 
             }
         }
-    }
+    };
 
+    &-footer {
+        bottom: 42.5px;
+        position: absolute;
+        width: 100%;
+        
+        .add-widget {
+            display: block;
+            background: linear-gradient(to bottom right, $active--link, #6063EE);
+            height: 40px;
+            max-width: 223px;
+            width: 100%;
+            border-radius: 6px;
+            color: #000;
+            line-height: 16px;
+            letter-spacing: 1.2px;
+            margin: 0 auto;
+            padding: 0 10px;
+            font: {
+                weight: bold;
+                size: 12px;
+            };
+        }
+
+        .line {
+            display: block;
+            background-color: $text--color;
+            opacity: 0.5;
+            height: 1px;
+            width: 100%;
+            margin-top: 24px;
+            margin-bottom: 25.67px;
+        }
+        
+        .help {
+            margin-bottom: 20px;
+        }
+
+        .help, .logout {
+            background: none;
+            display: flex;
+            align-items: center;
+            color: $text--color;
+            gap: 12px;
+            margin-left: 32px;
+        }
+    }
 }

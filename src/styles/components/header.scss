@@ -31,7 +31,7 @@
             letter-spacing: 0.4px;
             color: $text--color;
             opacity: 0.6;
-            transition: 0.3s;
+            transition: 0.3s ease;
 
             &:hover {
                 color: $active--link;
