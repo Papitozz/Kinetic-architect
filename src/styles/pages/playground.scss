@@ -26,3 +26,659 @@
 
 // Aside
 @import "../components/aside.scss";
+
+// main
+.card-container {
+    padding: 32px;
+    background-color: $aside--bg;
+}
+
+.main {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background-color: $bgc;
+
+    &-header {
+        margin-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 8px;
+
+        h3 {
+            line-height: 24px;
+            letter-spacing: 1.6px;
+            color: $active--link;
+
+            span {
+                width: 48px;
+                height: 1px;
+                display: inline-block;
+                background-color: $active--link;
+                vertical-align: middle;
+                margin-left: 8px;
+            }
+        };
+
+        h2 {
+            color: $text--color;
+
+            font: {
+                family: "Manrope", sans-serif;
+                size: 48px;
+                weight: 800;
+            };
+
+            span {
+                background-image: linear-gradient(to right, #A3A6FF, #6063EE);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            };
+        };
+
+        p {
+            color: $text--gray;
+            line-height: 29.3px;
+            font-size: 18px;
+        }
+    };
+
+    &-visual {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 32px;
+        text-align: center;
+
+        &__architecture {
+
+            & > h2 {
+                color: $text--color;
+                line-height: 28px;
+                font: {
+                    family: "Manrope", sans-serif;
+                    size: 28px;
+                    weight: bold;
+                };
+            };
+
+            & > p {
+                line-height: 20px;
+                letter-spacing: 1.4px;
+                color: $text--gray;
+                font-size: 14px;
+                margin-top: 4px;
+                margin-bottom: 24px;
+            };
+
+            .slider {
+                position: relative;
+                overflow-x: hidden;
+                max-width: 596px;
+                width: 100%;
+                margin: 0 auto;
+
+                &-images {
+                    width: 100%;
+                    display: flex;
+                    gap: 30px;
+                    transition: 0.5s ease;
+                    
+                    & img {
+                        height: 368px;
+                        width: 100%;
+                        flex-shrink: 0;
+                        object-fit:cover;
+                    }
+                }
+
+                button {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 40px;
+                    height: 40px;
+                    background-color: rgba(#192540, 0.6);
+                    border-radius: 12px;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                };
+
+                .left {
+                    left: 16px;
+                };
+
+                .right {
+                    right: 16px;
+                };
+
+                &-lines {
+                    @extend %flex;
+                    gap: 8px;
+                    position: absolute;
+                    bottom: 24px;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    .line {
+                        width: 8px;
+                        height: 4px;
+                        background-color: rgba($text--color, 0.2);
+                        display: inline-block;
+                        transition: 0.3s ease;
+
+                        &[data-active="true"] {
+                            background-color: rgba($active--link, 1);
+                            width: 32px;
+                        }
+                    }
+                };
+            }
+        };
+
+        &__environment {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+            align-self: start;
+
+            .title {
+                h2 {
+                    color: $text--color;
+                    line-height: 28px;
+                    font: {
+                        weight: bold;
+                        family: "Manrope", sans-serif;
+                        size: 20px;
+                        margin-bottom: 4px;
+                    }
+                };
+
+                h3 {
+                    color: $text--gray;
+                    line-height: 20px;
+                    letter-spacing: 1.4px;
+                    font-size: 14px;
+                };
+            };
+
+            p {
+                color: $text--gray;
+                font-size: 12px;
+                line-height: 16px;
+            };
+
+            .checkboxes {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                p {
+                    line-height: 24px;
+                    letter-spacing: -0.4px;
+                    color: $text--color;
+                    font: {
+                        weight: bold;
+                        size: 16px;
+                    }
+                };
+
+                input {
+                    width: 16px;
+                    height: 16px;
+                    appearance: none;
+                    position: relative;
+                    border: 1px solid #40485D;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:checked {
+                        background-color: $active--link;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        border-radius: 50%;
+                        width: 6px;
+                        height: 6px;
+                    }
+
+                    &:checked::after {
+                        border: none;
+                        background-color: #0F00A4;
+                    }
+                }
+
+                .illumination, .obsidian {
+                    @extend %flex;
+                    cursor: pointer;
+                    width: 218.33px;
+                    height: 56px;
+                    padding: 0 16px;
+                    background-color: $active--bg;
+                }
+            }
+        }
+    };
+
+    &-logic {
+        @extend %grid;
+        margin-top: 32px;
+        margin-bottom: 32px;
+        grid-template-columns: 1fr 2fr;
+
+        .logic-core > h2 {
+            color: $text--color;
+            line-height: 28px;
+            font: {
+                weight: bold;
+                size: 20px;
+                family: "Manrope", sans-serif;
+            };
+        };
+
+        .logic-core > h3 {
+            color: $text--gray;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 1.4px;
+            margin-top: 4px;
+            margin-bottom: 32px;
+        };
+
+        .calculator {
+
+            &-result {
+                background-color: #000;
+                height: 104px;
+                padding: 24px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 4px;
+                margin-bottom: 12px;
+
+                & > p {
+                    color: $text--gray;
+                    font-size: 12px;
+                    line-height: 16px;
+                    letter-spacing: 1.2px;
+                };
+
+                & > span {
+                    color: $main--system;
+                    line-height: 36px;
+                    letter-spacing: -1.5px;
+                    font: {
+                        size: 30px;
+                        weight: bold;
+                    }
+                }
+            };
+            
+            &-buttons {
+                @extend %grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                justify-items: center;
+                gap: 6.58px;
+            };
+            
+            &-button {
+                width: 100%;
+                height: 56px;
+                background: none;
+                border-radius: 2px;
+                
+                line-height: 24px;
+                font: {
+                    weight: bold;
+                    size: 16px;
+                };
+            };
+
+            .clear, .pm, .percent {
+                background-color: rgba(#192540, 0.3);
+                color: $text--color;
+            };
+
+            .divide, .multiply, .minus, .plus {
+                background-color: rgba($actions, 0.2);
+                color: $main--system;
+            };
+
+            .b0, .point, .b1, .b2, .b3, .b4, .b5, .b6, .b7, .b8, .b9 {
+                background-color: #192540;
+                color: $text--color;
+            };
+
+            .equal {
+                background: linear-gradient(to right bottom, $active--link, #6063EE);
+                color: #000;
+            }
+
+            .b0 {
+                grid-column: 1/3;
+            }
+        };
+
+        .architect-access {
+            display: flex;
+            flex-direction: column;
+
+            &__header {
+                @extend %flex;
+                margin-bottom: 40px;
+            }
+
+            &__left h2 {
+                color: $text--color;
+                line-height: 28px;
+                font: {
+                    size: 20px;
+                    weight: bold;
+                    family: "Manrope", sans-serif;
+                };
+            };
+
+            &__left h3 {
+                color: $text--gray;
+                line-height: 20px;
+                letter-spacing: 1.4px;
+                font-size: 14px;
+            }
+
+            &__right {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #C180FF;
+                border-radius: 12px;
+                padding: 4px 16px;
+                background-color: rgba($actions, 0.2);
+
+                color: $main--system;
+                line-height: 15px;
+                letter-spacing: -0.5px;
+                font: {
+                    weight: bold;
+                    size: 10px;
+                };
+            };
+
+            .access-form {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 6px;
+                justify-items: left;
+
+                .comm {
+                    align-self: flex-start;
+                };
+
+                .pas-strength {
+                    @extend %flex;
+                    position: absolute;
+                    bottom: -50%;
+                    gap: 12px;
+
+                    & p {
+                        color: $active--link;
+                        line-height: 13.5px;
+                        letter-spacing: -0.45px;
+                        font: {
+                            weight: bold;
+                            size: 9px;
+                        }
+                    }
+                };
+
+                .pas-lines {
+                    @extend %flex;
+                    gap: 4px;
+                }
+
+                .pas-line {
+                    width: 25.81px;
+                    height: 4px;
+                    background-color: #192540;
+                    border-radius: 12px;
+                }
+
+                .identity, .password, .comm {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    max-width: 256px;
+                    width: 100%;
+
+                    & > span {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        color: red;
+                        font-size: 12px;
+
+                    }
+
+                    input {
+                        display: block;
+                        max-width: 250px;
+                        width: 100%;
+                        height: 44px;
+                        padding: 0 16px;
+                        background-color: #000;
+                        color: $text--color;
+
+                        &::placeholder {
+                            color: rgba(#6D758C, 0.4);
+                        };
+                    };
+
+                    label {
+                        color: $text--gray;
+                        line-height: 15px;
+                        letter-spacing: 1px;
+                        font: {
+                            size: 10px;
+                            weight: bold;
+                        }
+                    };
+                };
+
+                .finalize {
+                    max-width: 256px;
+                    width: 100%;
+                    height: 48px;
+                    background: linear-gradient(to right bottom, $active--link, #6063EE);
+                    border-radius: 4px;
+                    margin-top: 116.5px;
+
+                    color: #000;
+                    line-height: 16px;
+                    letter-spacing: 1.2px;
+                    font: {
+                        weight: bold;
+                        size: 12px;
+                    }
+                }
+            }
+        }
+    };
+
+    &-queue {
+            @extend %grid;
+            grid-template-columns: 5fr 7fr;
+
+            .mission-queue {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+                align-items: left;
+
+                &__header {
+
+                    h2 {
+                        color: $text--color;
+                        line-height: 28px;
+                        font: {
+                            weight: bold;
+                            size: 20px;
+                            family: "Manrope", sans-serif;
+                        };
+                    };
+
+                    h3 {
+                        color: $text--gray;
+                        line-height: 20px;
+                        letter-spacing: 1.4px;
+                        font-size: 14px;
+                    };
+                };
+
+                &__input {
+                    background-color: #000;
+                    height: 55px;
+                    border-radius: 4px;
+                    padding: 0 8px 0 24px;
+                    @extend %flex;
+                    gap: 26px;
+                    width: fit-content;
+
+                    #task-input {
+                        background-color: #000;
+                        font-size: 16px;
+                        color: $text--color;
+
+                        &::placeholder {
+                            color: rgba(#6D758C, 0.4);
+                        }
+                    };
+
+                    .add-task {
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: $active--link;
+                        border-radius: 6px;
+
+                        & img {
+                            width: 18px;
+                            height: 18px;
+                        };
+                    }
+                };
+
+                &__tasks {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+
+                    li {
+                        display: flex;
+                        gap: 16px;
+                        align-items: center;
+                        color: $text--color;
+                        line-height: 24px;
+                        font: {
+                            weight: medium;
+                            font-size: 16px;
+
+                        };
+
+                        input {
+                            appearance: none;
+                            background: none;
+                            border: 1px solid #40485D;
+                            border-radius: 2px;
+                            width: 20px;
+                            height: 20px;
+
+                            &:checked {
+                                border-color: $active--link;
+                                background-image: url('../../assets/images/task-ok.svg');
+                                background-repeat: no-repeat;
+                                background-position: center;
+                            }
+                        };
+
+                        input:checked + label {
+                            color: $text--gray;
+                            text-decoration-line: line-through;
+                        }
+                    }
+                }
+
+            };
+
+            .connectivity-stable {
+                display:flex;
+                flex-direction: column;
+                justify-content: end;
+                align-items: left;
+                gap: 16px;
+                
+                &__header {
+                    display: flex;
+                    gap: 16px;
+                }
+
+                .kernel-active, .sync-optimized {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 2px; 
+                    height: 25px;
+                    font: {
+                        size: 10px;
+                        weight: bold;
+                    }
+                }
+
+                .kernel-active {
+                    border: 1px solid rgba(#22C55E, 0.2);
+                    background-color: rgba(#22C55E, 0.1);
+                    color: #4ADE80;
+                    width: 117.39px;
+                    line-height: 15px;
+                    letter-spacing: 1px;
+                };
+
+                .sync-optimized {
+                    width: 126.42px;
+                    background-color: rgba($active--link, 0.1);
+                    border: 1px solid rgba($active--link, 0.2);
+                    color: $active--link;
+                    line-height: 15px;
+                    letter-spacing: 1px;
+                };
+
+                h2 {
+                    color: $text--color;
+                    font: {
+                        size: 30px;
+                        weight: 800;
+                        family: "Manrope", sans-serif;
+                    };
+
+                    span {
+                        color: $main--system;
+                    };
+                };
+
+                p {
+                    color: $text--gray;
+                    line-height: 24px;
+                    font-size: 16px;
+                }
+            }
+        }
+}
