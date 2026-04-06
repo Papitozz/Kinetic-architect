@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // mail
-        const mailReg = /^[0-9a-zа-яё]{5,}@[a-z]{2,}\.[a-z]{2,}$/i;
+        const mailReg = /^[0-9a-zа-яё\.]{5,}@[a-z]{2,}\.[a-z]{2,}$/i;
 
         finalize.addEventListener('click', e => {
             e.preventDefault();
@@ -251,20 +251,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    function getCookie(name)  {
-        const cookies = document.cookie.split('; ').map(item => item.split('='));
-        return Object.fromEntries(cookies)[name];
-    }
-
-    function checkAuth() {
-        if (getCookie('isAuth')) {
-            window.location.href = '../dashboard.html';
-        } else {
-            window.location.href = 'auth.html';
-        }
-    }
-
-    checkAuth();
     sliderFunction();
     calculatorFunction();
     taskManager();
